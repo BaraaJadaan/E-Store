@@ -20,6 +20,7 @@ class Collection(models.Model):
 
 class Product(models.Model):
     title = models.CharField(max_length=255)
+    slug = models.SlugField(default='-')
     description = models.TextField()
     inventory = models.IntegerField()
     price = models.DecimalField(max_digits=7, decimal_places=2)
